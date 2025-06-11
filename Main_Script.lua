@@ -1,3 +1,7 @@
+_G.place = {
+    ["126884695634066"] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/WhatTheSavage/Lua/refs/heads/main/Grow%20A%20Garden/Update_Logs.lua'))()"
+}
+
 local keysTable = {
     ["Staff"] = {
         ["8589544491"] = "PRIME-X-PLOIT-473115-P1H9WL-A3R0JS-ZG4XAU-RURV3F-T2L8XG"
@@ -34,9 +38,5 @@ if not isValidKey() then
     player:Kick("\nInvalid key or UserID mismatch.")
     return
 end
-
-_G.place = {
-    ["126884695634066"] = "loadstring(game:HttpGet('https://raw.githubusercontent.com/WhatTheSavage/Lua/refs/heads/main/Grow%20A%20Garden/Update_Logs.lua'))()"
-}
 
 loadstring(game:HttpGet('https://raw.githubusercontent.com/WhatTheSavage/Lua/refs/heads/main/gg.lua'))()
