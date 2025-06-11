@@ -17,7 +17,7 @@ local keysTable = {
 }
 
 local player = game.Players.LocalPlayer
-local userIdStr = tostring(player.UserId)
+local userIdStr = player.UserId
 local userKey = _G.PrimeKey
 
 local function isValidKey()
